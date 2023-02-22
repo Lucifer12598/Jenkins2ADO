@@ -4,7 +4,6 @@ resources:
      type: github
      endpoint: github.com_Lucifer12598
      name: Lucifer12598/Jenkins2ADO
-     ref: main
 trigger:
   - master
 pool:
