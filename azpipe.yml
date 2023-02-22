@@ -1,0 +1,25 @@
+resources:
+  repositories:
+   - script:
+      git config --global user.name "Tamil2223893"
+      git config --global user.Password "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"
+    - repository: SeleniumJavaMaven
+      type: github
+      endpoint: https://token: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@github.com/Tamil2223893/SeleniumJavaMaven.git
+      name: Tamil2223893/SeleniumJavaMaven
+      ref: main
+trigger:
+  - master
+pool:
+  vmImage: ubuntu-latest
+steps:
+  - task: Maven@3
+    inputs:
+      mavenPomFile: SeleniumJavaMaven/pom.xml
+      mavenOptions: -Xmx3072m
+      javaHomeOption: JDKVersion
+      jdkVersionOption: "11"
+      jdkArchitectureOption: x64
+      publishJUnitResults: true
+      testResultsFiles: "**/surefire-reports/TEST-*.xml"
+      goals: clean test
