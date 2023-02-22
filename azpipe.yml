@@ -1,8 +1,5 @@
 resources:
   repositories:
-   - script:
-      git config --global user.name "Tamil2223893"
-      git config --global user.Password "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"
    - repository: SeleniumJavaMaven
       type: github
       endpoint: https://github.com/Tamil2223893/SeleniumJavaMaven.git
